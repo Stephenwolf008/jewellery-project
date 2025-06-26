@@ -8,7 +8,6 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Success from "./pages/Success";
 import Cancel from "./pages/Cancel";
-import TestSanity from "./pages/TestSanity";
 
 export default function App() {
   return (
@@ -22,7 +21,6 @@ export default function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/success" element={<Success />} />
         <Route path="/cancel" element={<Cancel />} />
-        <Route path="/sanity-test" element={<TestSanity />} />
       </Routes>
     </BrowserRouter>
   );
