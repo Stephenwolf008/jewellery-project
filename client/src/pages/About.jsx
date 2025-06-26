@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Helmet } from "react-helmet";
 import "../styles/About.css";
 
 export default function About() {
+  useEffect(() => {
+    document.title = "About | Jewelry Boutique";
+  }, []);
+
   return (
     <div className="about-page">
       <Helmet>
