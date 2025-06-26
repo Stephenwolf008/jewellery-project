@@ -1,0 +1,130 @@
+/* src/styles/Home.css */
+.home {
+  background-color: #fdfdfd;
+  color: #0d5c63;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* Hero Banner */
+.hero-banner {
+  background: url("/images/banner.jpg") center/cover no-repeat;
+  text-align: center;
+  padding: 8rem 1rem;
+}
+.hero-title {
+  font-size: 3rem;
+  font-family: "Lora", serif;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+}
+.hero-subtitle {
+  font-size: 1.25rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: white;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+}
+.hero-button {
+  background-color: #cc9900;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: background 0.3s;
+}
+.hero-button:hover {
+  background-color: #b88400;
+}
+
+/* Carousel */
+.carousel-section {
+  overflow: hidden;
+  padding: 3rem 0;
+  background: #fdfdfd;
+}
+.carousel-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll 30s linear infinite;
+}
+.carousel-image {
+  width: 100%;
+  height: 500px;
+  object-fit: contain;
+  border-radius: 1rem;
+  margin: 0 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Call To Action */
+.cta-section {
+  background-color: #fef8e7;
+  text-align: center;
+  padding: 4rem 2rem;
+}
+.cta-section h2 {
+  font-size: 2rem;
+  font-family: "Lora", serif;
+  margin-bottom: 0.5rem;
+}
+.cta-section p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+.cta-button {
+  background-color: #ff6f61;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+.cta-button:hover {
+  background-color: #e85c50;
+}
+
+/* Trust Banner */
+.trust-banner {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #0d5c63;
+  color: white;
+  padding: 2rem 1rem;
+  gap: 2rem;
+}
+.trust-item {
+  font-size: 1rem;
+  background-color: #144d52;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Animation */
+.animated {
+  animation: fadeUp 1.5s ease-in-out;
+}
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
