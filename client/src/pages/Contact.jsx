@@ -1,5 +1,5 @@
 // Contact.jsx
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import axios from "axios";
@@ -18,10 +18,6 @@ export default function Contact() {
   });
 
   const [status, setStatus] = useState(null);
-
-  useEffect(() => {
-    document.title = "Contact Us | Jewelry Boutique";
-  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
