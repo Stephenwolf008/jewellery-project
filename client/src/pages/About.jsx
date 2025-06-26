@@ -8,7 +8,6 @@ export default function About() {
   return (
     <div className="about-page">
       <Helmet>
-        <title>About Us | Jewelry Boutique</title>
         <meta
           name="description"
           content="Learn about our story, values, artisans, and the timeless craftsmanship behind our luxury jewelry collections."
