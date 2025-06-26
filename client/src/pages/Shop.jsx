@@ -19,8 +19,9 @@ export default function Shop() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5001/api/products")
-      .then((res) => setProducts(res.data));
+      .get(`${import.meta.env.VITE_APP_BACKEND_URL}/api/products`)
+      .then((res) => setProducts(res.data))
+      .catch((error) => console.error("Error fetching products:", error));
   }, []);
 
   // Filter products based on search query (show all if empty)
