@@ -24,9 +24,14 @@ export default function About() {
       <section className="about-hero fade-in">
         <h1 className="text-4xl font-serif mb-4">Our Story</h1>
         <p className="text-lg max-w-2xl mx-auto text-softGray">
-          Jewelry Boutique was born from a passion for timeless beauty and fine
-          craftsmanship. Every piece we create embodies elegance, heritage, and
-          modern artistry.
+          At Caratelle, we believe jewelry is more than an accessory—it is a
+          reflection of elegance, legacy, and everlasting brilliance. With a
+          deep passion for diamonds, we craft pieces that embody sophistication
+          and celebrate life’s most precious milestones. Our promise lies in
+          ethical sourcing, unmatched craftsmanship, and timeless design. Every
+          Caratelle creation is a perfect balance of tradition and modern
+          artistry, designed to be cherished for generations. Caratelle is not
+          just jewelry—it is a story of brilliance, love, and legacy.
         </p>
       </section>
 

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import axios from "axios";
+import { Mail, Phone, MapPin } from "lucide-react"; // icons
 import "../styles/Contact.css";
 
 export default function Contact() {
@@ -50,15 +51,43 @@ export default function Contact() {
     <div className="contact-page">
       <Header />
 
+      {/* Hero */}
       <section className="contact-hero">
         <h1>Contact Us</h1>
         <p>
-          We're here to help. Whether you have a question or need support, we'd
-          love to hear from you.
+          We'd love to hear from you. Whether it’s a custom design, product
+          inquiry, or partnership — our team is here to help.
         </p>
       </section>
 
-      <section className="contact-form-section">
+      {/* Contact Info + Form */}
+      <section className="contact-container">
+        {/* Left Info */}
+        <div className="contact-info">
+          <h2>Get in Touch</h2>
+          <p>
+            Reach out to us via the form or through our official contact
+            channels below.
+          </p>
+          <div className="info-item">
+            <Mail className="icon" />
+            <span>support@luxjewels.com</span>
+          </div>
+          <div className="info-item">
+            <Phone className="icon" />
+            <span>+1 (800) 234-5678</span>
+          </div>
+          <div className="info-item">
+            <MapPin className="icon" />
+            <span>5th Avenue, New York, USA</span>
+          </div>
+          <div className="contact-quote">
+            ✨ Luxury is in every detail, and we ensure your journey is just as
+            elegant.
+          </div>
+        </div>
+
+        {/* Form */}
         <form className="contact-form" onSubmit={handleSubmit}>
           {/* Name */}
           <div className="form-group">
@@ -98,7 +127,7 @@ export default function Contact() {
             />
           </div>
 
-          {/* Reason for Contact */}
+          {/* Reason */}
           <div className="form-group">
             <label htmlFor="reasonForContact">Reason for Contact</label>
             <select
@@ -174,21 +203,17 @@ export default function Contact() {
             ></textarea>
           </div>
 
-          {/* Submit Button */}
+          {/* Submit */}
           <button type="submit" className="submit-button">
             {status === "sending" ? "Sending..." : "Send Message"}
           </button>
 
           {/* Status Messages */}
           {status === "success" && (
-            <p style={{ color: "green", marginTop: "1rem" }}>
-              Message sent successfully!
-            </p>
+            <p className="success-msg">Message sent successfully! 🎉</p>
           )}
           {status === "error" && (
-            <p style={{ color: "red", marginTop: "1rem" }}>
-              Something went wrong. Please try again.
-            </p>
+            <p className="error-msg">Something went wrong. Please try again.</p>
           )}
         </form>
       </section>
