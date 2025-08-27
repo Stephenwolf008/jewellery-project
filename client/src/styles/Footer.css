@@ -1,0 +1,101 @@
+.footer {
+  background: #000; /* pure black for elegance */
+  color: #ddd;
+  padding: 4rem 2rem 2rem;
+  margin-top: 4rem;
+}
+
+.footer-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+}
+
+.footer-title {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-family: "Lora", serif;
+  color: #cc9900; /* warm gold */
+}
+
+.footer-text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.85;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links li {
+  margin-bottom: 0.6rem;
+}
+.footer-links a {
+  text-decoration: none;
+  color: #ddd;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+}
+.footer-links a:hover {
+  color: #ff6f61; /* coral pink hover */
+}
+
+/* Newsletter */
+.footer-form {
+  display: flex;
+  margin-top: 1rem;
+}
+.footer-input {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border-radius: 2rem 0 0 2rem;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+}
+.footer-btn {
+  padding: 0.6rem 1.2rem;
+  background: linear-gradient(135deg, #cc9900, #ff6f61);
+  color: #fff;
+  border: none;
+  border-radius: 0 2rem 2rem 0;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.3s, transform 0.2s;
+}
+.footer-btn:hover {
+  background: linear-gradient(135deg, #b88400, #e85c50);
+  transform: scale(1.05);
+}
+
+/* Social icons */
+.footer-social {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+.footer-social a {
+  color: #ddd;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+.footer-social a:hover {
+  color: #ff6f61;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  text-align: center;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+  color: #999;
+}

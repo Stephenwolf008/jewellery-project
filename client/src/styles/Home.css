@@ -1,130 +1,310 @@
-/* src/styles/Home.css */
-.home {
-  background-color: #fdfdfd;
-  color: #0d5c63;
-  font-family: "Montserrat", sans-serif;
+/* ================================
+   Hero Banner with Video
+================================ */
+.hero-banner {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
 }
 
-/* Hero Banner */
-.hero-banner {
-  background: url("/images/banner.jpg") center/cover no-repeat;
-  text-align: center;
-  padding: 8rem 1rem;
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
 }
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.55);
+  text-align: center;
+  padding: 3rem 2rem;
+  border-radius: 1.5rem;
+  animation: fadeIn 1.5s ease-in-out;
+  z-index: 1;
+}
+
 .hero-title {
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-family: "Lora", serif;
   margin-bottom: 1rem;
-  color: white;
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.5);
+  color: #fdfdfd;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
+
 .hero-subtitle {
   font-size: 1.25rem;
   max-width: 700px;
   margin: 0 auto 2rem;
-  color: white;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+  color: #fdfdfd;
+  opacity: 0.9;
 }
+
 .hero-button {
-  background-color: #cc9900;
+  background: linear-gradient(135deg, #cc9900, #ff6f61);
   color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 1rem;
-  text-decoration: none;
-  font-weight: 500;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  transition: background 0.3s;
-}
-.hero-button:hover {
-  background-color: #b88400;
-}
-
-/* Carousel */
-.carousel-section {
-  overflow: hidden;
-  padding: 3rem 0;
-  background: #fdfdfd;
-}
-.carousel-track {
-  display: flex;
-  width: fit-content;
-  animation: scroll 30s linear infinite;
-}
-.carousel-image {
-  width: 100%;
-  height: 500px;
-  object-fit: contain;
-  border-radius: 1rem;
-  margin: 0 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* Call To Action */
-.cta-section {
-  background-color: #fef8e7;
-  text-align: center;
-  padding: 4rem 2rem;
-}
-.cta-section h2 {
-  font-size: 2rem;
-  font-family: "Lora", serif;
-  margin-bottom: 0.5rem;
-}
-.cta-section p {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-}
-.cta-button {
-  background-color: #ff6f61;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 1rem;
+  padding: 0.9rem 2rem;
+  border-radius: 2rem;
   text-decoration: none;
   font-weight: 600;
-  transition: background-color 0.3s;
+  font-size: 1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s, background 0.3s;
+}
+.hero-button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #b88400, #e85c50);
+}
+
+/* ================================
+   Carousel (Dark Theme)
+================================ */
+.carousel-section {
+  padding: 5rem 2rem;
+  text-align: center;
+  background: #0d0d0d; /* dark background */
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-family: "Lora", serif;
+  margin-bottom: 3rem;
+  color: #fdfdfd; /* white for contrast */
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.carousel-card {
+  background: #1a1a1a; /* deep black card */
+  border-radius: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.carousel-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.8);
+}
+
+.carousel-image {
+  width: 100%;
+  height: 280px;
+}
+
+.carousel-info {
+  padding: 1.5rem;
+}
+
+.carousel-info h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: #fdfdfd;
+}
+
+.price {
+  color: #cc9900; /* luxury gold */
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.carousel-button {
+  display: inline-block;
+  background: linear-gradient(135deg, #cc9900, #ff6f61);
+  color: #fff;
+  padding: 0.5rem 1.25rem;
+  border-radius: 1rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+}
+.carousel-button:hover {
+  background: linear-gradient(135deg, #b88400, #e85c50);
+  transform: scale(1.05);
+}
+
+/* ================================
+   Animations
+================================ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.85),
+    rgba(20, 20, 20, 0.9)
+  );
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+  position: relative;
+}
+.cta-overlay {
+  max-width: 700px;
+  margin: auto;
+}
+.cta-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #cc9900; /* warm gold */
+}
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #ddd;
+}
+.cta-button {
+  display: inline-block;
+  padding: 14px 36px;
+  background: #cc9900;
+  color: #000;
+  font-weight: bold;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
 .cta-button:hover {
-  background-color: #e85c50;
+  background: #ff6f61; /* coral pink */
+  color: #fff;
+}
+
+/* Story Section (video + text) */
+.story-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  padding: 80px 40px;
+  gap: 40px;
+}
+.story-content h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #cc9900;
+}
+.story-video video {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6);
+}
+@media (max-width: 768px) {
+  .story-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+/* Luxury Section (image + text split) */
+.luxury-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 80px 40px;
+  gap: 40px;
+  align-items: center;
+  background: #000;
+  color: #fff;
+}
+.luxury-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+.luxury-text h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ff6f61;
+}
+.luxury-button {
+  display: inline-block;
+  padding: 12px 28px;
+  margin-top: 20px;
+  background: #cc9900;
+  color: #000;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+.luxury-button:hover {
+  background: #ff6f61;
+  color: #fff;
+}
+@media (max-width: 768px) {
+  .luxury-section {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
 }
 
 /* Trust Banner */
 .trust-banner {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  background-color: #0d5c63;
-  color: white;
-  padding: 2rem 1rem;
-  gap: 2rem;
-}
-.trust-item {
-  font-size: 1rem;
-  background-color: #144d52;
-  padding: 1rem 2rem;
-  border-radius: 1rem;
-  font-weight: 500;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  background: #0d0d0d; /* Black theme */
+  padding: 4rem 2rem;
+  text-align: center;
+  color: #fdfdfd;
 }
 
-/* Animation */
-.animated {
-  animation: fadeUp 1.5s ease-in-out;
+.trust-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #cc9900; /* warm gold accent */
+  margin-bottom: 2.5rem;
+  font-family: "Lora", serif;
 }
-@keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.trust-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(204, 153, 0, 0.4);
+  padding: 2rem 1.5rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.trust-card:hover {
+  transform: translateY(-6px);
+  border-color: #cc9900;
+  box-shadow: 0 0 20px rgba(204, 153, 0, 0.2);
+}
+
+.trust-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.trust-card h3 {
+  font-size: 1.3rem;
+  color: #ff6f61; /* coral pink highlight */
+  margin-bottom: 0.5rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+.trust-card p {
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.5;
 }

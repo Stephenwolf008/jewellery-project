@@ -1,0 +1,126 @@
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.65);
+  border-bottom: 1px solid rgba(204, 153, 0, 0.3);
+  z-index: 1000;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 3rem;
+  color: #fdfdfd;
+}
+
+/* Brand */
+.brand {
+  font-family: "Lora", serif;
+  font-size: 1.8rem;
+  color: #cc9900; /* warm gold */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+/* Nav Links */
+.nav-link {
+  margin: 0 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  color: #ddd;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #cc9900;
+}
+
+/* Underline animation */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #cc9900;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Mobile Menu */
+.hamburger {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fdfdfd;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 100vh;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(15px);
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  transition: right 0.4s ease;
+  z-index: 9999;
+}
+
+.mobile-nav.open {
+  right: 0;
+}
+
+.close-btn {
+  align-self: flex-end;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #cc9900;
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+
+.mobile-link {
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  color: #ddd;
+  transition: color 0.3s ease;
+}
+
+.mobile-link:hover,
+.mobile-link.active {
+  color: #cc9900;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .left-nav,
+  .right-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .brand {
+    font-size: 1.4rem;
+  }
+}
